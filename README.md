@@ -9,7 +9,7 @@ d6133ace5afaa0882cf214cf88daba39e266c078 - N64 US
 9743aa026e9269b339eb0e3044cd5830a440c1fd - GC US
 ```
 
-Once created put in the `ports/soh2` folder. Texture pack files can be added to the `ports/soh2/mods` folder. Logs are recorded automatically and kept in `/ports/soh2/logs`. Please provide a log if you report an issue. PortMaster does not mantain the 2Ship3Harkinian repository and is not responsible for bugs or issues outside of our control.
+Once created put in the `ports/soh2` folder. Texture pack files can be added to the `ports/soh2/mods` folder. Logs are recorded automatically and kept in `/ports/soh2/logs`. Please provide a log if you report an issue. PortMaster does not mantain the 2Ship2Harkinian repository and is not responsible for bugs or issues outside of our control.
 
 ## Graphics Adjustments
 You can open `2ship2harkinan.json` in a text editor and modify the values as you wish. If you mess up the syntax, the game will regenerate this file and your settings will be reverted to default.
@@ -26,7 +26,7 @@ You can find mods at https://gamebanana.com/games/20371
 ## Thanks
 Nintendo for the game  
 HarbourMasters for the native pc port  
-Mallyveil for the cover art  
+AkerHasReawakened for the cover art  
 Testers and Devs from the PortMaster Discord  
 
 
