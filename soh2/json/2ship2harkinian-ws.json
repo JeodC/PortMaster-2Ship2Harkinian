@@ -75,6 +75,106 @@
         "gFixes": {
             "FixAmmoCountEnvColor": 1
         },
+        "gHudEditor": {
+            "A": {
+                "Mode": 4,
+                "Position": {
+                    "X": 210
+                }
+            },
+            "B": {
+                "Mode": 4,
+                "Position": {
+                    "X": 189,
+                    "Y": 16
+                },
+                "Scale": 1.0
+            },
+            "CDown": {
+                "Mode": 4,
+                "Position": {
+                    "X": 264,
+                    "Y": 30
+                }
+            },
+            "CLeft": {
+                "Mode": 4,
+                "Position": {
+                    "X": 242,
+                    "Y": 10
+                }
+            },
+            "CRight": {
+                "Mode": 4,
+                "Position": {
+                    "X": 285,
+                    "Y": 10
+                }
+            },
+            "CUp": {
+                "Mode": 4,
+                "Position": {
+                    "X": 269,
+                    "Y": 0
+                }
+            },
+            "Clock": {
+                "Mode": 2,
+                "Position": {
+                    "Y": 224
+                },
+                "Scale": 1.0
+            },
+            "DPad": {
+                "Mode": 4,
+                "Position": {
+                    "X": 277,
+                    "Y": 67
+                }
+            },
+            "Hearts": {
+                "Mode": 3,
+                "Position": {
+                    "X": 17,
+                    "Y": 14
+                }
+            },
+            "Keys": {
+                "Mode": 3
+            },
+            "Magic": {
+                "Mode": 3,
+                "Position": {
+                    "X": 6,
+                    "Y": 22
+                }
+            },
+            "Minigames": {
+                "Mode": 3
+            },
+            "Minimap": {
+                "Mode": 4
+            },
+            "Rupees": {
+                "Mode": 3,
+                "Position": {
+                    "X": 6,
+                    "Y": 220
+                }
+            },
+            "SkullKidTimer": {
+                "Mode": 2
+            },
+            "Skulltulas": {
+                "Mode": 3
+            },
+            "Start": {
+                "Mode": 4
+            },
+            "Timers": {
+                "Mode": 3
+            }
+        },
         "gInterpolationFPS": 20,
         "gMatchRefreshRate": 0,
         "gSettings": {

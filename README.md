@@ -12,7 +12,7 @@ d6133ace5afaa0882cf214cf88daba39e266c078 - N64 US
 Obtain your rom and download [2Ship2Harkinian](https://github.com/HarbourMasters/2ship2harkinian/releases), then place the rom in the same folder and run the 2ship binary to generate your `mm.o2r` file. Copy it to the `ports/soh2` folder. Texture pack files can be added to the `ports/soh2/mods` folder. Logs are recorded automatically and kept in `/ports/soh2/logs`. Please provide a log if you report an issue. PortMaster does not mantain the 2Ship2Harkinian repository and is not responsible for bugs or issues outside of our control.
 
 ## Graphics Adjustments
-You can open `2ship2harkinan.json` in a text editor and modify the values as you wish. If you mess up the syntax, the game will regenerate this file and your settings will be reverted to default. Please create a backup before modification.
+You can open `2ship2harkinan.json` in a text editor and modify the values as you wish. If you mess up the syntax, the game will regenerate this file and your settings will be reverted to default. Please create a backup before modification. If you're running a widescreen device, you can copy `json/2ship2harkinian-ws.json` to the base folder as `2ship2harkinian.json` for a widescreen HUD.
 
 ## Further Adjustments
 There is a `soh2.gptk` file you can use to change which button emulates F1 (default is L3). Controller menu navigation is not implemented yet, but you can use a mouse.
