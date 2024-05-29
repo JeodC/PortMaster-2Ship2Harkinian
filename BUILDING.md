@@ -34,8 +34,8 @@ source ~/.bashrc
 
 ## Build 2Ship (Develop)
 ```
-git clone https://github.com/HarbourMasters/2ship2harkinian.git
-cd 2ship2harkinian
+git clone https://github.com/HarbourMasters/2ship2harkinian || git clone https://github.com/Waterdish/2ship2harkinian-Android
+cd 2ship2harkinian || cd 2ship2harkinian-Android
 git submodule update --init
 cmake -H. -B build-cmake -GNinja -DUSE_OPENGLES=1 -DCMAKE_BUILD_TYPE:STRING=Release
 cmake --build build-cmake --config Release --target Generate2ShipOtr -j$(nproc)

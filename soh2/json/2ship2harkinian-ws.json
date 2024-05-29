@@ -38,16 +38,16 @@
                 "24HoursClock": 0,
                 "AuthenticLogo": 1,
                 "BowReticle": 1,
-                "ClockType": 1,
+                "ClockType": 0,
                 "MotionBlur": {
                     "Interpolate": 0,
                     "Mode": 1
                 }
             },
             "Masks": {
-                "FastTransformation": 1,
-                "FierceDeitysAnywhere": 1,
-                "NoBlastMaskCooldown": 1
+                "FastTransformation": 0,
+                "FierceDeitysAnywhere": 0,
+                "NoBlastMaskCooldown": 0
             },
             "Playback": {
                 "DpadOcarina": 1,
@@ -183,7 +183,7 @@
             "MSAAValue": 1,
             "OpenMenuBar": 0,
             "OverlayFont": "Press Start 2P",
-            "TextureFilter": 2,
+            "TextureFilter": 1,
             "VsyncEnabled": 0
         }
     },
