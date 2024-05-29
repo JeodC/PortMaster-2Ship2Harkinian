@@ -188,7 +188,7 @@
         }
     },
     "Window": {
-        "AudioBackend": "wasapi",
+        "AudioBackend": "sdl",
         "Backend": {
             "Id": 3,
             "Name": "OpenGL"

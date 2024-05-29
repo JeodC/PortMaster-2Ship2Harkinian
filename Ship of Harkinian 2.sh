@@ -35,13 +35,13 @@ rm -rf $GAMEDIR/logs/*
 # Copy the right build to the main folder
 if [ $CFW_NAME == "ArkOS" ] || [ "$CFW_NAME" == 'ArkOS wuMMLe' ]; then
 	cp -f bin/compatibility.elf 2s2h.elf
-	cp -f bin/compatibility.o2r 2s2h.o2r
-	if [ "$(find "./mods" -name '*.o2r')" ]; then
+	cp -f bin/compatibility.o2r 2ship.o2r
+	if [ "$(find "./mods" -name '*.otr')" ]; then
 		echo "WARNING: .OTR MODS FOUND! PERFORMANCE WILL BE LOW IF ENABLED!!" > /dev/tty0
 	fi
 else
 	cp -f bin/performance.elf 2s2h.elf
-	cp -f bin/performance.o2r 2s2h.o2r
+	cp -f bin/performance.o2r 2ship.o2r
 fi
 
 # Run the game
