@@ -9,7 +9,7 @@ d6133ace5afaa0882cf214cf88daba39e266c078 - N64 US
 9743aa026e9269b339eb0e3044cd5830a440c1fd - GC US
 ```
 
-Obtain your rom and download [2Ship2Harkinian](https://github.com/HarbourMasters/2ship2harkinian/releases), then place the rom in the same folder and run the 2ship binary to generate your `mm.o2r` file. Copy it to the `ports/soh2` folder. Texture pack files can be added to the `ports/soh2/mods` folder. Logs are recorded automatically and kept in `/ports/soh2/logs`. Please provide a log if you report an issue. PortMaster does not mantain the 2Ship2Harkinian repository and is not responsible for bugs or issues outside of our control.
+Legally obtain your rom and download [2Ship2Harkinian](https://github.com/HarbourMasters/2ship2harkinian/releases), then place the rom in the same folder and run the 2ship binary to generate your `mm.o2r` file. Copy it to the `ports/soh2` folder. Texture pack files can be added to the `ports/soh2/mods` folder. Logs are recorded automatically and kept in `/ports/soh2/logs`. Please provide a log if you report an issue. PortMaster does not mantain the 2Ship2Harkinian repository and is not responsible for bugs or issues outside of our control.
 
 ## Graphics Adjustments
 You can open `2ship2harkinan.json` in a text editor and modify the values as you wish. If you mess up the syntax, the game will regenerate this file and your settings will be reverted to default. Please create a backup before modification. If you're running a widescreen device, you can copy `json/2ship2harkinian-ws.json` to the base folder as `2ship2harkinian.json` for a widescreen HUD.
