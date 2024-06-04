@@ -1,5 +1,5 @@
 ## Information
-2Ship2Harkinian binaries were built from the android fork on 05/29/2024 with commit [9a81e3e](https://github.com/Waterdish/2ship2harkinian-Android/commit/9a81e3eac9069b0142a8c1ed6826fa250c0e67d3). You can build your own binaries by following the [BUILDING.md guide](BUILDING.md).
+2Ship2Harkinian v1.0.1 binaries were built by fpasteau. You can build your own binaries by following the [BUILDING.md guide](BUILDING.md).
 
 ## Installation
 You must generate your `mm.o2r` file on a PC with one of the following SHAs:
