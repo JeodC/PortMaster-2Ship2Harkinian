@@ -21,21 +21,20 @@ get_controls
 GAMEDIR="/$directory/ports/soh2"
 
 # Exports
-export LD_LIBRARY_PATH="$GAMEDIR/libs:/usr/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="$GAMEDIR/libs:/usr/lib"
 
 # Permissions
 $ESUDO chmod 0777 /dev/tty0
 
 cd $GAMEDIR
 
-# Remove soh2 generated logs and substitute our own
-rm -rf $GAMEDIR/logs/*
-> "$GAMEDIR/logs/log.txt" && exec > >(tee "$GAMEDIR/logs/log.txt") 2>&1
+# Remove old log to prevent bloat
+rm -rf "$GAMEDIR/logs/2 Ship 2 Harkinian.log"
 
 # Copy the right build to the main folder
 if [ $CFW_NAME == "ArkOS" ] || [ "$CFW_NAME" == 'ArkOS wuMMLe' ]; then
 	cp -f bin/compatibility.elf 2s2h.elf
-	if [ "$(find "./mods" -name '*.otr')" ]; then
+	if [ "$(find "./mods" -name '*.o2r')" ]; then
 		echo "WARNING: .OTR MODS FOUND! PERFORMANCE WILL BE LOW IF ENABLED!!" > /dev/tty0
 	fi
 else
@@ -48,7 +47,6 @@ $GPTOKEYB "2s2h.elf" -c "soh2.gptk" &
 ./2s2h.elf
 
 # Cleanup
-rm -rf "$GAMEDIR/logs/2 Ship 2 Harkinian.log"
 $ESUDO systemctl restart oga_events & 
 printf "\033c" >> /dev/tty1
 printf "\033c" > /dev/tty0

@@ -78,6 +78,7 @@
         "gInterpolationFPS": 20,
         "gMatchRefreshRate": 0,
         "gSettings": {
+			"ControlNav": 1,
             "DisableCloseColorWrap": 1,
             "InternalResolution": 1.0,
             "MSAAValue": 1,
