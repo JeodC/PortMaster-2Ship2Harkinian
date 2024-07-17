@@ -43,17 +43,18 @@ cmake --build build-cmake --config Release -j$(nproc)
 ```
 
 ## Build 2Ship (Releases)
-1.  `git clone https://github.com/HarbourMasters/2ship2harkinian.git`
-2.  `cd 2ship2harkinian`
-3.  `git checkout tags/1.0.0` -- Change this to whatever release tag you want to use
-4.  `git submodule update --init`
-5.  `cmake -H. -Bbuild-cmake -GNinja -DUSE_OPENGLES=1 -DCMAKE_BUILD_TYPE:STRING=Release`
-6.  `cmake --build build-cmake --config Release --target Generate2ShipOtr -j$(nproc)`
-7.  `cmake --build build-cmake --config Release -j$(nproc)`
+```
+git clone https://github.com/HarbourMasters/2ship2harkinian.git
+cd 2ship2harkinian
+git checkout tags/x.x.x
+git submodule update --init
+cmake -H. -Bbuild-cmake -GNinja -DUSE_OPENGLES=1 -DCMAKE_BUILD_TYPE:STRING=Release
+cmake --build build-cmake --config Release --target Generate2ShipOtr -j$(nproc)
+cmake --build build-cmake --config Release -j$(nproc)
+```
 
 ## Retrieve the binaries
 1.  `cd build-cmake/mm`
 2.  `strip 2s2h.elf`
 3.  `mv 2s2h.elf performance.elf` -- Or compatibility.elf if you built on bullseye.
-4.  `mv 2s2h.o2r performance.o2r` -- Or compatibility.otr if you built on bullseye.
-5.  Copy both files to `roms/ports/soh2/bin/`
+4.  Copy the `.elf` to `roms/ports/soh2/bin/` and copy `2ship.o2r` to `roms/ports/soh2`.
