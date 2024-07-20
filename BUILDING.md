@@ -59,3 +59,4 @@ cmake --build build-cmake --config Release -j$(nproc)
 3.  `mv 2s2h.elf performance.elf` -- Or compatibility.elf if you built on bullseye.
 4.  Copy the `.elf` to `roms/ports/soh2/bin/` and copy `2ship.o2r` to `roms/ports/soh2`.
 5.  Copy the `build-cmake/assets` folder to `ports/soh2` and copy `build-cmake/ZAPD/ZAPD.out` to `ports/soh2/assets/extractor`.
+6.  If the build is a new version open `ports/soh2/assets/extractor/otrgen.txt` and edit `--portVer` around Line 33.
