@@ -30,7 +30,7 @@ echo 'export PATH=/usr/cmake-3.24.4-linux-aarch64/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-\* You may need to build and install tinyxml2 from source
+Note: You may need to build and install tinyxml2 from source
 
 ## Build 2Ship (Develop)
 ```
@@ -58,3 +58,4 @@ cmake --build build-cmake --config Release -j$(nproc)
 2.  `strip 2s2h.elf`
 3.  `mv 2s2h.elf performance.elf` -- Or compatibility.elf if you built on bullseye.
 4.  Copy the `.elf` to `roms/ports/soh2/bin/` and copy `2ship.o2r` to `roms/ports/soh2`.
+5.  Copy the `build-cmake/assets` folder to `ports/soh2` and copy `build-cmake/ZAPD/ZAPD.out` to `ports/soh2/assets/extractor`.
