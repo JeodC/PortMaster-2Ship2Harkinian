@@ -23,11 +23,15 @@ GAMEDIR="/$directory/ports/soh2"
 source $controlfolder/device_info.txt
 [ -f "${controlfolder}/mod_${CFW_NAME}.txt" ] && source "${controlfolder}/mod_${CFW_NAME}.txt"
 
-CUR_TTY="/dev/tty0"
 # Set current virtual screen
 if [ "$CFW_NAME" == "muOS" ]; then
   /opt/muos/extra/muxlog & CUR_TTY="/tmp/muxlog_info"
+else if [ "$CFW_NAME" == "TrimUI" ]; then
+  CUR_TTY="/dev/fd/1"
+else
+  CUR_TTY="/dev/tty0"
 fi
+
 
 # Exports
 export LD_LIBRARY_PATH="$GAMEDIR/libs:/usr/lib"
@@ -70,6 +74,13 @@ if [ ! -f "mm.o2r" ]; then
     if ls *.*64 1> /dev/null 2>&1; then
         echo "We need to generate O2R files! Stand by..." > $CUR_TTY
         ./assets/extractor/otrgen.txt
+        # Check if O2R files were generated
+        if [ ! -f "mm.o2r" ]; then
+            echo "Error: Failed to generate O2R files." > $CUR_TTY
+            exit 1
+        fi
+    else
+        echo "Missing ROM files!" > $CUR_TTY
     fi
 fi
 
