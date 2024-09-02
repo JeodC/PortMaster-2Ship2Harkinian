@@ -34,9 +34,8 @@ Note: You may need to build and install tinyxml2 from source
 
 ## Build 2Ship (Develop)
 ```
-git clone https://github.com/HarbourMasters/2ship2harkinian
+git clone --recursive https://github.com/HarbourMasters/2ship2harkinian
 cd 2ship2harkinian
-git submodule update --init
 cmake -H. -B build-cmake -GNinja -DUSE_OPENGLES=1 -DCMAKE_BUILD_TYPE:STRING=Release
 cmake --build build-cmake --config Release --target Generate2ShipOtr -j$(nproc)
 cmake --build build-cmake --config Release -j$(nproc)
@@ -44,10 +43,9 @@ cmake --build build-cmake --config Release -j$(nproc)
 
 ## Build 2Ship (Releases)
 ```
-git clone https://github.com/HarbourMasters/2ship2harkinian.git
+git clone --recursive https://github.com/HarbourMasters/2ship2harkinian.git
 cd 2ship2harkinian
 git checkout tags/x.x.x
-git submodule update --init
 cmake -H. -Bbuild-cmake -GNinja -DUSE_OPENGLES=1 -DCMAKE_BUILD_TYPE:STRING=Release
 cmake --build build-cmake --config Release --target Generate2ShipOtr -j$(nproc)
 cmake --build build-cmake --config Release -j$(nproc)
