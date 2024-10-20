@@ -1,7 +1,7 @@
 # Building from source 2Ship2Harkinian
 
 ## Install WSL and chroot
-1. 	Install wsl and ubuntu (use wsl2)
+1. 	Install wsl and ubuntu (use wsl2):
 ```
 sudo apt update
 sudo apt install -y apt-transport-https ca-certificates curl software-properties-common qemu-user-static debootstrap
@@ -11,7 +11,7 @@ sudo apt install docker-ce -y
 sudo docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 sudo qemu-debootstrap --arch arm64 bookworm /mnt/data/arm64 http://deb.debian.org/debian/
 ```
-Use bullseye instead of bookworm if building compatibility.
+ -- Use bullseye instead of bookworm if building compatibility.
 
 Note: The folder `/mnt/data/arm64` can be modified, for example to `/mnt/data/bookworm-arm64`. This is useful if you like to maintain multiple chroots.
 
@@ -32,23 +32,12 @@ source ~/.bashrc
 
 Note: You may need to build and install tinyxml2 from source
 
-## Build 2Ship (Develop)
-```
-git clone https://github.com/HarbourMasters/2ship2harkinian
-cd 2ship2harkinian
-git submodule update --init
-cmake -H. -B build-cmake -GNinja -DUSE_OPENGLES=1 -DCMAKE_BUILD_TYPE:STRING=Release
-cmake --build build-cmake --config Release --target Generate2ShipOtr -j$(nproc)
-cmake --build build-cmake --config Release -j$(nproc)
-```
-
 ## Build 2Ship (Releases)
 ```
-git clone https://github.com/HarbourMasters/2ship2harkinian.git
-cd 2ship2harkinian
+git clone https://github.com/HarbourMasters/2ship2harkinian.git && cd 2ship2harkinian
 git checkout tags/x.x.x
-git submodule update --init
-cmake -H. -Bbuild-cmake -GNinja -DUSE_OPENGLES=1 -DCMAKE_BUILD_TYPE:STRING=Release
+git submodule update --init --recursive
+cmake -H. -Bbuild-cmake -GNinja -DUSE_OPENGLES=1 -DBUILD_CROWD_CONTROL=0 -DCMAKE_BUILD_TYPE=Release
 cmake --build build-cmake --config Release --target Generate2ShipOtr -j$(nproc)
 cmake --build build-cmake --config Release -j$(nproc)
 ```
