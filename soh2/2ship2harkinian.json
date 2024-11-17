@@ -1,5 +1,6 @@
 {
     "CVars": {
+		"gAltAssets": 1,
         "gCheats": {
             "InfiniteConsumables": 0,
             "InfiniteHealth": 0,

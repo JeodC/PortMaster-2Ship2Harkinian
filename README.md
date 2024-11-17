@@ -25,6 +25,8 @@ The port uses SDL controller mapping and controls can be remapped from the menu 
 ## Suggested Mods
 You can find mods at https://gamebanana.com/games/20371.
 
+The [MM Reloaded](https://github.com/GhostlyDark/MM-Reloaded-2S2H) texture pack is in a prerelease state at time of writing, but it works. I recommend using the HD version, as the 4k version won't make much difference on the retro handhelds. Add the pack to `soh2/mods`, and either have the line `"gAltAssets": 1,` in your json or assign `TAB` to a button in the `soh2.gptk` file (default R3).
+
 ## Thanks
 - Nintendo for the game  
 - HarbourMasters for the native pc port  
