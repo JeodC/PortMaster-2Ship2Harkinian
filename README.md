@@ -9,15 +9,17 @@ d6133ace5afaa0882cf214cf88daba39e266c078 - N64 US
 9743aa026e9269b339eb0e3044cd5830a440c1fd - GC US
 ```
 
-Legally obtain your rom and place it in the `ports/soh2`, then start the port. Texture pack files can be added to the `ports/soh2/mods` folder.
+You can verify your rom at https://2ship.equipment.
 
-Logs are recorded automatically as `ports/soh/log.txt`. Please provide a log if you report an issue. PortMaster does not maintain the Ship of Harkinian repository and is not responsible for bugs or issues outside of our control. Likewise, HarbourMasters is not affiliated with PortMaster and this distribution is not officially supported by them. *Please come to PortMaster for help before approaching the HarbourMasters!*
+Legally obtain your rom and place it in `ports/soh2`, then start the port. Texture pack files can be added to the `ports/soh2/mods` folder.
+
+Logs are recorded automatically as `ports/soh/log.txt`. Please provide a log if you report an issue. PortMaster does not maintain the 2Ship2Harkinian repository and is not responsible for bugs or issues outside of our control. Likewise, HarbourMasters is not affiliated with PortMaster and this distribution is not officially supported by them. *Please come to PortMaster for help before approaching the HarbourMasters!*
 
 ## Graphics Adjustments
 You can open `2ship2harkinan.json` in a text editor and modify the values as you wish. If you mess up the syntax, the game will regenerate this file and your settings will be reverted to default. Please create a backup before modification.
 
 ## Menu Navigation
-There is a `soh2.gptk` file you can use to change which button emulates F1 (default is L3). Some devices have a special button called `guide` that makes for a good F1 mapping. Controller menu navigation is not implemented yet, but you can use a mouse.
+There is a `soh2.gptk` file you can use to change which button emulates F1 (default is L3). Some devices have a special button called `guide` that makes for a good F1 mapping.
 
 ## Default Gameplay Controls
 The port uses SDL controller mapping and controls can be remapped from the menu bar.
