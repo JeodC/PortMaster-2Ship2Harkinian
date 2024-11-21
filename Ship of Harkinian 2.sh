@@ -13,17 +13,14 @@ else
 fi
 
 source $controlfolder/control.txt
-get_controls
-
-# Source Device Info
-source $controlfolder/device_info.txt
 [ -f "${controlfolder}/mod_${CFW_NAME}.txt" ] && source "${controlfolder}/mod_${CFW_NAME}.txt"
+get_controls
 
 # Set variables
 GAMEDIR="/$directory/ports/soh2"
 
 # Exports
-export LD_LIBRARY_PATH="$GAMEDIR/libs:/usr/lib":$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH="$GAMEDIR/libs:$LD_LIBRARY_PATH"
 export SDL_GAMECONTROLLERCONFIG=$sdl_controllerconfig
 export PATCHER_FILE="$GAMEDIR/assets/extractor/otrgen"
 export PATCHER_GAME="$(basename "${0%.*}")" # This gets the current script filename without the extension
@@ -67,38 +64,6 @@ mv "$temp_file" "$input_file"
 
 # List of compatibility firmwares
 CFW_NAMES="ArkOS:ArkOS wuMMLe:ArkOS AeUX:knulli:TrimUI"
-
-# Check if the current CFW name is in the list
-contains() {
-    local value="$CFW_NAME"
-    local item
-    local tmp=$IFS
-    IFS=":" # Use : as the delimiter
-    echo "Checking if CFW_NAME '$value' is in the list..."
-    for item in $CFW_NAMES; do
-        echo "Comparing '$item' with '$value'..."
-        if [ "$item" = "$value" ]; then
-            echo "Match found: '$item'"
-            IFS=$tmp
-            return 0
-        fi
-    done
-    echo "No match found for '$value'."
-    IFS=$tmp
-    return 1
-}
-
-# If it's in the list use the compatibility binary
-if contains; then
-    echo "Using compatibility binary..."
-    cp -f "$GAMEDIR/bin/compatibility.elf" "$GAMEDIR/2s2h.elf"
-    if [ -n "$(find ./mods -name '*.o2r' -print)" ]; then
-        echo "WARNING: .O2R MODS FOUND! PERFORMANCE WILL BE LOW IF ENABLED!!" > $CUR_TTY
-    fi
-else
-    echo "Using performance binary..."
-    cp -f "$GAMEDIR/bin/performance.elf" "$GAMEDIR/2s2h.elf"
-fi
 
 # Check if we need to generate any o2r files
 if [ ! -f "mm.o2r" ]; then
