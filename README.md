@@ -1,5 +1,5 @@
 ## Information
-2Ship2Harkinian binaries were built from the develop branch (bleeding edge) on 08/14/2024. You can build your own binaries by following the [BUILDING.md guide](soh2/BUILDING.md).
+2Ship2Harkinian binaries were built from the develop branch (bleeding edge) on 08/14/2024. You can build your own binaries by following the [BUILDING.md guide](https://github.com/PortsMaster-MV/PortMaster-MV-New/blob/main/ports/soh2/soh2/BUILDING.md).
 
 ## Installation
 You must generate your `mm.o2r` file with a rom that has one of the following SHAs:
@@ -22,7 +22,7 @@ You can open `2ship2harkinan.json` in a text editor and modify the values as you
 There is a `soh2.gptk` file you can use to change which button emulates F1 (default is L3). Some devices have a special button called `guide` that makes for a good F1 mapping.
 
 ## Default Gameplay Controls
-The port uses SDL controller mapping and controls can be remapped from the menu bar.
+The port uses SDL controller mapping and controls can be remapped from the menu bar. For devices without a right analog stick, the gptk file allows for the `HOTKEY + ABXY` button combo to use the C-Buttons.
 
 ## Suggested Mods
 You can find mods at https://gamebanana.com/games/20371.
