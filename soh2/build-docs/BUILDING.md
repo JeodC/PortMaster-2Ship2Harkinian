@@ -1,6 +1,8 @@
 # Building from source 2Ship2Harkinian
 Use a chroot or Docker image with the included dockerfile and `docker-setup.txt`.
 
+The included `soh2.patch` file allows compiling on Ubuntu focal without having to recompile git.
+
 ## Build Dependencies
 ```
 rm -rf */build-soh
